@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>FACfory</title>
+  <meta name="description" content="Future Apps Company — Apps hechas para todos. Portafolio interactivo de aplicaciones.">
+
+  <!-- Google Fonts: Playfair Display (display) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ── NEBULOSAS ── -->
+  <div class="nebula n1" aria-hidden="true"></div>
+  <div class="nebula n2" aria-hidden="true"></div>
+  <div class="nebula n3" aria-hidden="true"></div>
+  <div class="nebula n4" aria-hidden="true"></div>
+
+  <!-- ── CAMPO DE ESTRELLAS ── -->
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
+  <!-- ── CURSOR SPARKLE (desktop) ── -->
+  <div class="sparkle-dot" id="cursor" aria-hidden="true"></div>
+
+  <div class="site-wrap">
+
+    <!-- ══════════════════════════════
+         NAV
+    ══════════════════════════════ -->
+    <nav>
+      <a href="#" class="logo">FACfory</a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto" class="nav-cta">Contacto ✦</a></li>
+      </ul>
+
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menú" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile nav drawer -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Navegación móvil">
+      <a href="#proyectos">✦ Proyectos</a>
+      <a href="#nosotros">✦ Nosotros</a>
+      <a href="#contacto">✦ Contacto</a>
+    </nav>
+
+
+    <!-- ══════════════════════════════
+         HERO
+    ══════════════════════════════ -->
+    <section class="hero" aria-label="Inicio">
+      <div class="hero-eyebrow">FACfory — Desde el universo digital</div>
+
+      <h1 class="hero-title">
+        Apps<br>
+        <span class="brand">para todos</span>
+      </h1>
+
+      <p class="hero-sub">
+        Exploramos el cosmos del software para crear experiencias mágicas,
+        accesibles y memorables.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn-primary">Ver proyectos ✦</a>
+        <a href="#contacto"  class="btn-ghost">Contáctanos</a>
+      </div>
+
+      <div class="scroll-hint" aria-hidden="true">
+        <span>Explora</span>
+        <div class="line"></div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════
+         PROYECTOS
+    ══════════════════════════════ -->
+    <section id="proyectos" aria-label="Proyectos">
+
+      <div class="projects-header">
+        <div>
+          <div class="section-label">Nuestro universo</div>
+          <h2 class="section-title">Proyectos<br>en órbita</h2>
+        </div>
+        <p class="section-subtitle">Cada app es un nuevo mundo.<br>Explóralos, úsalos, compártelos.</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <!-- ── Card: El Oráculo de Bolsillo ── -->
+        <article class="card">
+          <div class="card-preview-placeholder">
+            🔮
+            <span class="card-badge badge-live">● Live</span>
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Mística · IA</div>
+            <h3 class="card-title">El Oráculo de Bolsillo</h3>
+            <p class="card-desc">Consulta al oráculo y recibe respuestas del universo. Una experiencia mística impulsada por inteligencia artificial.</p>
+            <a href="#" class="card-action">Consultar <span class="arr">→</span></a>
+          </div>
+        </article>
+
+        <!-- ── Card: Soundboard ── -->
+        <article class="card">
+          <div class="card-preview-placeholder">
+            🎵
+            <span class="card-badge badge-live">● Live</span>
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Audio · Entretenimiento</div>
+            <h3 class="card-title">Soundboard</h3>
+            <p class="card-desc">Tu panel de sonidos favoritos al alcance de un toque. Efectos, música y diversión en una interfaz intuitiva.</p>
+            <a href="#" class="card-action">Abrir <span class="arr">→</span></a>
+          </div>
+        </article>
+
+        <!-- ── Card: Memory Match ── -->
+        <article class="card">
+          <div class="card-preview-placeholder">
+            🃏
+            <span class="card-badge badge-live">● Live</span>
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Juego · Memoria</div>
+            <h3 class="card-title">Memory Match</h3>
+            <p class="card-desc">Desafía tu memoria en este juego de pares con temáticas únicas. Perfecto para todas las edades.</p>
+            <a href="#" class="card-action">Jugar <span class="arr">→</span></a>
+          </div>
+        </article>
+
+        <!-- ── Card: Proyecto Nebula (en desarrollo) ── -->
+        <article class="card">
+          <div class="card-preview-placeholder" style="opacity:0.5;">
+            🚀
+            <span class="card-badge badge-dev">⟳ En desarrollo</span>
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Próximamente</div>
+            <h3 class="card-title">Proyecto Nebula</h3>
+            <p class="card-desc">Una nueva aventura toma forma en nuestros laboratorios. Sigue las redes para ser el primero en saber.</p>
+            <a href="#contacto" class="card-action-ghost">Notificarme <span class="arr">→</span></a>
+          </div>
+        </article>
+
+        <!-- ── Card: App Cosmos (en desarrollo) ── -->
+        <article class="card">
+          <div class="card-preview-placeholder" style="opacity:0.5;">
+            ⚡
+            <span class="card-badge badge-dev">⟳ En desarrollo</span>
+          </div>
+          <div class="card-body">
+            <div class="card-tag">Próximamente</div>
+            <h3 class="card-title">App Cosmos</h3>
+            <p class="card-desc">Un proyecto que redefinirá cómo interactuamos con el universo digital. Muy pronto.</p>
+            <a href="#contacto" class="card-action-ghost">Notificarme <span class="arr">→</span></a>
+          </div>
+        </article>
+
+        <!-- ── Card: Placeholder ── -->
+        <article class="card" style="border-style:dashed; display:flex; align-items:center; justify-content:center; min-height:280px; text-align:center; padding:2rem; cursor:default;" aria-hidden="true">
+          <div>
+            <div style="font-size:2rem; margin-bottom:0.8rem; opacity:0.4;">✦</div>
+            <p style="font-size:0.84rem; color:var(--muted); opacity:0.5;">Tu próxima app<br>comienza aquí</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════
+         NOSOTROS
+    ══════════════════════════════ -->
+    <section id="nosotros" aria-label="Quiénes somos">
+
+      <!-- Órbitas animadas -->
+      <div class="about-visual" aria-hidden="true">
+        <div class="orbit-ring">
+          <div class="orbit-ring-2">
+            <div class="orbit-center">FAC<br>fory</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div class="about-text">
+        <div class="section-label">Quiénes somos</div>
+        <h2 class="section-title">Creamos desde<br>las estrellas.</h2>
+        <p>
+          FACfory es un estudio de desarrollo de apps con una misión simple pero
+          poderosa: <em>hacer que el software sea accesible, bonito y útil para
+          todos</em>, sin importar su nivel técnico.
+        </p>
+        <p>
+          Creemos que cada persona merece herramientas digitales que se sientan
+          mágicas. Eso nos impulsa a diseñar con cuidado y desarrollar con pasión.
+        </p>
+        <div class="values" role="list">
+          <span class="value-pill" role="listitem">✦ Accesibilidad</span>
+          <span class="value-pill" role="listitem">◆ Creatividad</span>
+          <span class="value-pill" role="listitem">✦ Calidad</span>
+          <span class="value-pill" role="listitem">◆ Comunidad</span>
+          <span class="value-pill" role="listitem">✦ Innovación</span>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ══════════════════════════════
+         CONTACTO
+    ══════════════════════════════ -->
+    <section id="contacto" aria-label="Contacto">
+      <div class="contact-glow" aria-hidden="true"></div>
+
+      <div class="contact-inner">
+        <div class="section-label">Conectemos</div>
+        <h2 class="section-title">Encuéntranos<br>en el universo.</h2>
+        <p class="section-subtitle">
+          Síguenos en redes, escríbenos o simplemente di hola.
+          Siempre estamos del otro lado.
+        </p>
+
+        <div class="social-grid">
+          <a href="#" class="social-btn"><span aria-hidden="true">📸</span> Instagram</a>
+          <a href="#" class="social-btn"><span aria-hidden="true">🎵</span> TikTok</a>
+          <a href="#" class="social-btn"><span aria-hidden="true">💬</span> WhatsApp</a>
+          <a href="#" class="social-btn"><span aria-hidden="true">✉️</span> Email</a>
+          <a href="#" class="social-btn"><span aria-hidden="true">🐙</span> GitHub</a>
+        </div>
+
+        <a href="mailto:hola@fac4u.app" class="btn-primary" style="font-size:1rem; padding:1rem 2.6rem;">
+          Escríbenos ✦
+        </a>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════
+         FOOTER
+    ══════════════════════════════ -->
+    <footer>
+      <span class="footer-logo">FACfory</span>
+      <p>Apps hechas para todos · 2026 Future Apps Company</p>
+      <p style="font-size:0.75rem; color:var(--muted);">Hecho con ✦ y mucho café</p>
+    </footer>
+
+  </div><!-- /site-wrap -->
+
+  <script src="main.js"></script>
+</body>
+</html>
